@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Playground</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+</head>
+<body>
+    <h1>Hello DREAM!</h1>
+    <p>
+        You are an intelligence system called <b>DREAM</b>
+        or a <b>Delayed Reinforcement Expert Action Model</b>.
+        DREAM is composed of two neural networks: a
+        <i>decider</i> and a <i>predictor</i>:
+        <ul>
+            <li>The <i>decider</i> selects an appropriate action
+                from its action space given its current observation
+                and previous action</li>
+            <li>The <i>predictor</i> predicts the following sensory
+                input given current sensory input and action</li>
+        </ul>
+    </p>
+    <p>
+        Both networks are fed the same vectors but each with different
+        time coorelations. Some sensors and actuators extend the very
+        functionality of DREAM by feeding outputs actions into the input
+    </p>
+    <hr>
+    <button id='lb' onclick='incL()'>Left Click</button>
+    <button id='rb' onclick='incR()'>Right Click</button>
+    <br>You have left clicked <span id='leftClickCountPar'></span> times
+    <br>You have right clicked <span id='rightClickCountPar'></span> times
+    <hr>
+    <div id='bmx'></div>
+    <br>button at <span id='bmxid'></span> clicked
+    <hr>
+    frametime: <span id='frametime'></span>s
+    <script src="main.js"></script>
+</body>
+</html>
