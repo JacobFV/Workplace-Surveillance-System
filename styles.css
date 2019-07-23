@@ -1,21 +1,26 @@
 body {
     overflow: hidden;
+    background-color: black;
 }
 
 h1 {
+    position: relative;
+    top: 5vh;
+    color: yellow;
     font-size: 48pt;
     text-align: center;
     font-family: monospace;
 }
 
-#videoElement {
+video {
     position: absolute;
-
     top: 0;
     left: 0;
+    
     width: 100vw;
     height: 100vh;
 
+    z-index: -1;
 }
 
 .button {
@@ -33,12 +38,32 @@ h1 {
     font-variant: small-caps;
 }
 
-#ignore {
-    left: 7.5vw;
-    background-color: #d33a;
+.button:focus {
+    outline: none;
 }
 
-#learn {
+#ignore {
+    left: 7.5vw;
+    background-color: rgba(243, 71, 48, 0.667);
+}
+
+#ignore:hover {
+    background-color: rgba(243, 71, 48, 0.74);
+}
+
+#ignore:active {
+    background-color: rgba(243, 71, 48, 0.938);
+}
+
+#trigger {
     right: 7.5vw;
-    background-color: #33da;
+    background-color: rgba(51, 173, 221, 0.667);
+}
+
+#trigger:hover {
+    background-color: rgba(51, 173, 221, 0.712);
+}
+
+#trigger:active {
+    background-color: rgba(51, 173, 221, 0.918);
 }
