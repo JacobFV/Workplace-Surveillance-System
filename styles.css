@@ -1,92 +1,44 @@
-.heading {
-    font-variant: small-caps;
+body {
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 48pt;
     text-align: center;
-    font-style: normal;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: monospace;
 }
 
 #videoElement {
-	width: 500px;
-	height: 375px;
-	background-color: #666;
-}
-
-div.big_container {
     position: absolute;
+
     top: 0;
-    bottom: 0;
-}
-
-div.big_container * {
-    position: relative;
-    margin: 10px;
-}
-
-div.side_container {
-    background-color: #ddd;
-}
-
-div#train_container {
     left: 0;
-    width: 20vw;
+    width: 100vw;
+    height: 100vh;
+
 }
 
-div#main_container {
-    left: 20vw;
-    right: 20vw;
-}
-
-.fine_print {
-    font: normal normal normal 8pt/1.0 Calibri;
-}
-
-div#caught_container {
-    width: 20vw;
-    right: 0;
-}
-
-div.bottom {
+.button {
     position: absolute;
-    bottom: 0;
+    bottom: 10vh;
+
+    width: 15vw;
+    height: 15vw;
+
+    border-radius: 50%;
+    border: none;
+
+    font-size: 32pt;
+    font-family: sans-serif;
+    font-variant: small-caps;
 }
 
-.round {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-
-    border-width: 0;
-    border-radius: 10px;
-
-    font-style: oblique;
-    font-size: 20px;
-
-    transform: translateY(0px);
-    box-shadow: 0 1.5px black;
+#ignore {
+    left: 7.5vw;
+    background-color: #d33a;
 }
 
-.round:focus {
-    outline: none;
-}
-
-.round:hover {
-    transform: translateY(1px);
-    box-shadow: 0 1.0px black;
-}
-
-.round:active {
-    transform: translateY(3px);
-    box-shadow: 0 -0.5px black;
-}
-
-.think {
-    background-color: yellow;
-}
-
-.careful {
-    background-color: red;
-}
-
-.thoughtless {
-    background-color: green;
+#learn {
+    right: 7.5vw;
+    background-color: #33da;
 }
