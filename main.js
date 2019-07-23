@@ -1,38 +1,18 @@
-let leftClickCount = 0
-let rightClickCount = 0
+var video = document.querySelector("#videoElement");
 
-function incL() {
-    leftClickCount ++
-    document.getElementById('leftClickCountPar')
-    .innerHTML = leftClickCount.toString()
-}
+var canvas = document.createElement("canvas");
+canvas.width = video.videoWidth;
+canvas.height = video.videoHeight;
+var ctx = canvas.getContext("2d");
 
-function incR() {
-    rightClickCount ++
-    document.getElementById('rightClickCountPar')
-    .innerHTML = rightClickCount.toString()
-}
-
-bmx = document.getElementById('bmx')
-for(let x=0;x<5;x++) {
-    for(let y=0;y<5;y++) {
-        const coordinates = x.toString() + ',' + y.toString()
-        bmx.innerHTML
-            +='<button id=\'bmxb\' onClick=\'bmxClick(' + coordinates + ')\'>'
-            + coordinates + '</button>'
-    }
-    bmx.innerHTML += '<br>'
-}
-
-function bmxClick(x, y) {
-    document.getElementById('bmxid').innerHTML = 
-        '(' + x.toString() + ', ' + y.toString() + ')'
-}
-
-const frametimespan = document.getElementById('frametime')
-let frame = 0
-setInterval(() => {
-    frame++
-    frametimespan.innerHTML =
-        (frame/20).toPrecision(3)
-}, 50)
+//the following block was taken and modified from https://www.kirupa.com/html5/accessing_your_webcam_in_html5.htm
+if (navigator.mediaDevices.getUserMedia) {
+    navigator.mediaDevices.getUserMedia({ video: true })
+      .then(function (stream) {
+        video.srcObject = stream;
+      })
+      .catch(function (error) {
+        console.log("Something went wrong!");
+      });
+  }
+//end of quote

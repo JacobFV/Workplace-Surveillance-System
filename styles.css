@@ -1,0 +1,44 @@
+body {
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 48pt;
+    text-align: center;
+    font-family: monospace;
+}
+
+#videoElement {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.button {
+    position: absolute;
+    bottom: 10vh;
+
+    width: 15vw;
+    height: 15vw;
+
+    border-radius: 50%;
+    border: none;
+
+    font-size: 32pt;
+    font-family: sans-serif;
+    font-variant: small-caps;
+}
+
+#ignore {
+    left: 7.5vw;
+    background-color: #d33a;
+}
+
+#learn {
+    right: 7.5vw;
+    background-color: #33da;
+}
